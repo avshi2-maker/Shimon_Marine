@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מתכנן ערכת הרמה ימית · Marine Lifting Set Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;800&family=Saira+Condensed:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c1420; --bg2:#101e2e; --panel:#13243668; --panel2:#16293c; --edge:#27425c;
+  --ink:#e8f1f6; --dim:#8aa6ba; --teal:#2ec9c2; --teal-d:#1d8f8b;
+  --amber:#f1ab3a; --red:#e85b4d; --green:#3cc185; --blue:#5aa7e0;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --disp:'Saira Condensed','Heebo',sans-serif;
+  --body:'Heebo',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)}
+body{
+  background:
+    linear-gradient(transparent 0 0) ,
+    repeating-linear-gradient(0deg,#ffffff06 0 1px,transparent 1px 46px),
+    repeating-linear-gradient(90deg,#ffffff06 0 1px,transparent 1px 46px),
+    radial-gradient(1200px 700px at 80% -10%,#173a4733,transparent),
+    var(--bg);
+  min-height:100vh;
+}
+.wrap{max-width:1340px;margin:0 auto;padding:18px 20px 60px}
+header.app{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--edge);padding-bottom:14px;margin-bottom:18px}
+.logo{width:42px;height:42px;border:2px solid var(--teal);border-radius:9px;display:grid;place-items:center;flex:0 0 auto;background:#0c1c28}
+.logo svg{width:26px;height:26px}
+.titles h1{font-family:var(--disp);font-weight:700;font-size:30px;letter-spacing:.5px;margin:0;line-height:1}
+.titles .en{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+.badges{margin-inline-start:auto;display:flex;gap:8px;flex-wrap:wrap}
+.badge{font-family:var(--mono);font-size:10.5px;color:var(--dim);border:1px solid var(--edge);border-radius:999px;padding:5px 11px;letter-spacing:1px}
+.badge b{color:var(--teal)}
+
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.preset{font-family:var(--body);font-size:13px;font-weight:600;cursor:pointer;border:1px solid var(--edge);background:var(--panel);color:var(--ink);border-radius:8px;padding:8px 14px;transition:.15s}
+.preset:hover{border-color:var(--teal);color:var(--teal)}
+.preset small{display:block;font-family:var(--mono);font-size:9.5px;color:var(--dim);font-weight:400;margin-top:2px}
+
+.grid{display:grid;grid-template-columns:300px 1fr 320px;gap:16px;align-items:start}
+@media(max-width:1080px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel2);border:1px solid var(--edge);border-radius:12px;overflow:hidden}
+.card>h2{font-family:var(--disp);font-weight:600;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;margin:0;padding:11px 14px;background:#0e2030;border-bottom:1px solid var(--edge);color:var(--dim);display:flex;justify-content:space-between;align-items:center}
+.card>h2 .en{font-family:var(--mono);font-size:9.5px}
+.card .body{padding:14px}
+
+label.field{display:block;margin-bottom:14px}
+label.field .lab{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:600;margin-bottom:5px}
+label.field .lab .v{font-family:var(--mono);color:var(--teal);font-size:14px}
+input[type=range]{width:100%;accent-color:var(--teal);height:4px}
+input[type=number]{width:100%;background:#0b1722;border:1px solid var(--edge);color:var(--ink);font-family:var(--mono);font-size:14px;border-radius:7px;padding:7px 9px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{flex:1 1 46%;font-family:var(--body);font-size:12px;font-weight:600;cursor:pointer;border:1px solid var(--edge);background:#0b1722;color:var(--dim);border-radius:7px;padding:8px 6px;transition:.12s;line-height:1.2}
+.seg button .d{display:block;font-family:var(--mono);font-size:10px;color:var(--teal);margin-top:3px}
+.seg button.on{border-color:var(--teal);background:#11323288;color:var(--ink)}
+.prio{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:3px}
+
+/* results */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:560px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.metric{background:#0e2030;border:1px solid var(--edge);border-radius:10px;padding:10px 12px}
+.metric .k{font-size:11px;color:var(--dim);font-weight:600}
+.metric .val{font-family:var(--mono);font-size:21px;font-weight:700;color:var(--ink);line-height:1.1;margin-top:3px}
+.metric .val small{font-size:12px;color:var(--dim)}
+
+.comp{border:1px solid var(--edge);border-radius:11px;padding:12px 13px;margin-bottom:11px;background:#0f2233;position:relative;transition:.15s}
+.comp .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.comp .nm{font-size:14px;font-weight:800}
+.comp .nm small{display:block;font-family:var(--mono);font-size:10px;color:var(--teal);font-weight:400;margin-top:2px}
+.comp .price{font-family:var(--mono);font-size:15px;font-weight:700;text-align:left}
+.comp .price small{display:block;font-size:9px;color:var(--dim);font-weight:400}
+.specs{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--dim);margin:8px 0 7px}
+.specs b{color:var(--ink);font-weight:700}
+.bar{height:9px;border-radius:6px;background:#0a141d;border:1px solid var(--edge);overflow:hidden;position:relative}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:6px;transition:width .25s,background .25s}
+.barlab{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;margin-top:4px}
+.upgrade{margin-top:9px;border-top:1px dashed var(--edge);padding-top:8px;display:flex;align-items:center;gap:9px;font-size:12px}
+.upgrade .chip{font-family:var(--mono);font-size:11px;border:1px solid var(--amber);color:var(--amber);border-radius:7px;padding:4px 9px;cursor:pointer;background:#241a0a;white-space:nowrap}
+.upgrade .chip:hover{background:#3a2a0e}
+.upgrade .txt{color:var(--dim);line-height:1.3}
+.upgrade .txt b{color:var(--ink)}
+.tag{position:absolute;inset-block-start:-9px;inset-inline-start:13px;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:6px;text-transform:uppercase}
+.t-ok{background:#0e3326;color:var(--green);border:1px solid var(--green)}
+.t-marg{background:#3a2a0e;color:var(--amber);border:1px solid var(--amber)}
+.t-over{background:#3a120e;color:var(--red);border:1px solid var(--red)}
+.comp.marg{border-color:#6b521f}
+.comp.over{border-color:#7a2b22}
+
+/* right column */
+.assembly svg{width:100%;height:auto;display:block}
+.cv{display:flex;flex-direction:column;gap:9px}
+.cv .row{display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.cv .row .k{color:var(--dim)}
+.cv .row .v{font-family:var(--mono);font-weight:700}
+.gauge{height:13px;border-radius:8px;background:linear-gradient(90deg,var(--green),var(--amber) 70%,var(--red));position:relative;margin:6px 0 2px;border:1px solid var(--edge)}
+.gauge .pin{position:absolute;top:-4px;width:3px;height:21px;background:#fff;border-radius:2px;box-shadow:0 0 6px #000a;transform:translateX(50%)}
+.note{font-size:11px;color:var(--dim);line-height:1.5;border-top:1px solid var(--edge);margin-top:12px;padding-top:10px}
+.note code{font-family:var(--mono);color:var(--teal)}
+footer{margin-top:26px;font-family:var(--mono);font-size:10px;color:var(--dim);text-align:center;letter-spacing:1px;line-height:1.8}
+.statusline{font-family:var(--disp);letter-spacing:1px;font-size:14px;font-weight:700;padding:9px 13px;border-radius:9px;text-align:center;margin-bottom:13px}
+.s-ok{background:#0e3326;color:var(--green);border:1px solid #1c6b4d}
+.s-marg{background:#332608;color:var(--amber);border:1px solid #6b521f}
+.s-over{background:#330f0c;color:var(--red);border:1px solid #7a2b22}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="app">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2ec9c2" stroke-width="1.8">
+        <path d="M12 2v4M12 6l-7 9M12 6l7 9M5 15l7 5 7-5"/><circle cx="12" cy="4" r="1.6"/>
+      </svg>
+    </div>
+    <div class="titles">
+      <h1>מתכנן ערכת הרמה ימית</h1>
+      <div class="en">MARINE LIFTING&nbsp;SET DESIGNER · MOCKUP v0.1</div>
+    </div>
+    <div class="badges">
+      <span class="badge">תקן <b>GL 0027/ND&nbsp;Rev&nbsp;10</b></span>
+      <span class="badge">רצועות <b>SpanSet</b></span>
+      <span class="badge">אביזרים <b>Crosby</b></span>
+    </div>
+  </header>
+
+  <div class="presets" id="presets">
+    <button class="preset" data-p="port">נמל · גובה גל 0<small>22 t · DAF 1.15</small></button>
+    <button class="preset" data-p="open">ים פתוח<small>22 t · DAF 1.30</small></button>
+    <button class="preset" data-p="inshore">מוגן · קל<small>16.4 t · DAF 1.15</small></button>
+    <button class="preset" data-p="static">יבשתי סטטי<small>22 t · DAF 1.00</small></button>
+  </div>
+
+  <div class="grid">
+
+    <!-- ===== INPUTS ===== -->
+    <section class="card">
+      <h2>קלט <span class="en">INPUT</span></h2>
+      <div class="body">
+        <label class="field">
+          <span class="lab">משקל כלי השיט · W <span class="v"><span id="wv">22.0</span> t</span></span>
+          <input type="range" id="W" min="2" max="60" step="0.1" value="22">
+        </label>
+        <label class="field">
+          <span class="lab">LCG · מרכז כובד אורכי <span class="v"><span id="lcgv">5.107</span> m</span></span>
+          <input type="range" id="LCG" min="3" max="8" step="0.001" value="5.107">
+        </label>
+        <label class="field">
+          <span class="lab">חלוקת עומס · אחורי / קדמי <span class="v"><span id="splitv">51</span>%</span></span>
+          <input type="range" id="split" min="40" max="65" step="1" value="51">
+        </label>
+        <label class="field">
+          <span class="lab">זווית רצועה · sling angle <span class="v"><span id="angv">62</span>°</span></span>
+          <input type="range" id="ang" min="45" max="78" step="0.5" value="62">
+        </label>
+
+        <div class="lab" style="font-size:13px;font-weight:600;margin:4px 0 6px">תנאי הרמה · מקדם דינמי DAF</div>
+        <div class="seg" id="cond">
+          <button data-daf="1.30" data-k="open">ים פתוח<span class="d">DAF 1.30</span></button>
+          <button data-daf="1.15" data-k="port" class="on">נמל · גל 0<span class="d">DAF 1.15</span></button>
+          <button data-daf="1.15" data-k="inshore">מוגן צף<span class="d">DAF 1.15</span></button>
+          <button data-daf="1.00" data-k="static">יבשתי סטטי<span class="d">DAF 1.00</span></button>
+        </div>
+
+        <label class="field" style="margin-top:16px">
+          <span class="lab">מקדם הטיה · SKL <span class="v"><span id="sklv">1.25</span></span></span>
+          <div class="seg" id="skl">
+            <button data-skl="1.25" class="on">4 רגליים (לא־סטטי)<span class="d">SKL 1.25</span></button>
+            <button data-skl="1.00">סטטית מוגדרת<span class="d">SKL 1.00</span></button>
+          </div>
+        </label>
+
+        <label class="field" style="margin-top:6px">
+          <span class="lab">עדיפות · עלות ↔ מקדם ביטחון <span class="v"><span id="priov">איזון</span></span></span>
+          <input type="range" id="prio" min="0" max="100" step="1" value="50">
+          <div class="prio"><span>חיסכון בעלות</span><span>מקסימום מרווח</span></div>
+        </label>
+      </div>
+    </section>
+
+    <!-- ===== RESULTS ===== -->
+    <section class="card">
+      <h2>פלט · בחירת ערכה <span class="en">SELECTED SET</span></h2>
+      <div class="body">
+        <div class="statusline s-ok" id="status">— OK —</div>
+        <div class="metrics">
+          <div class="metric"><div class="k">עומס וו דינמי</div><div class="val" id="mHook">28.6<small> t</small></div></div>
+          <div class="metric"><div class="k">עומס רגל (תכן)</div><div class="val" id="mLeg">9.3<small> t</small></div></div>
+          <div class="metric"><div class="k">ניצול מרבי</div><div class="val" id="mUtil">90<small>%</small></div></div>
+          <div class="metric"><div class="k">עלות ערכה</div><div class="val" id="mCost">—<small> ₪</small></div></div>
+        </div>
+        <div id="comps"></div>
+      </div>
+    </section>
+
+    <!-- ===== ASSEMBLY + COST/VALUE ===== -->
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <section class="card assembly">
+        <h2>תצוגת הרכבה <span class="en">ASSEMBLY</span></h2>
+        <div class="body" id="asm"></div>
+      </section>
+      <section class="card">
+        <h2>איזון עלות / ערך <span class="en">COST · VALUE</span></h2>
+        <div class="body">
+          <div class="cv">
+            <div class="row"><span class="k">עלות נבחרת</span><span class="v" id="cvCost">—</span></div>
+            <div class="row"><span class="k">עלות "מרווח מלא"</span><span class="v" id="cvSafe" style="color:var(--dim)">—</span></div>
+            <div class="row"><span class="k">פער (ערך מוסף)</span><span class="v" id="cvDelta" style="color:var(--amber)">—</span></div>
+          </div>
+          <div class="gauge"><div class="pin" id="cvPin" style="inset-inline-start:50%"></div></div>
+          <div class="prio"><span>חסכוני</span><span>מרווח גבוה</span></div>
+          <div class="note" id="cvNote">
+            רכיבים <b style="color:var(--amber)">בגבול</b> (ניצול &gt;85%) מסומנים — לחיצה על
+            <code>שדרוג</code> מציגה את עלות המידה הבאה מול תוספת המרווח.
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    INDICATIVE COST MODEL — replace with live supplier quotes · selection per GL Noble Denton 0027/ND Rev 10
+    <br>מודל עלות אינדיקטיבי בלבד · מוקאפ לאפיון — לא תחליף לתכן הנדסי מאושר
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // ---- component catalogues (WLL t · indicative price ₪) ----
+  const ROUND = [{w:3,p:170},{w:4,p:200},{w:5,p:240},{w:6,p:300},{w:8,p:420},{w:10,p:540},{w:12,p:680},{w:15,p:880},{w:20,p:1220},{w:25,p:1650},{w:30,p:2100}]
+        .map(o=>({...o,mbl:+(o.w*7).toFixed(1),df:7,lab:o.w+' t · Magnum',maker:'SpanSet'}));
+  const SHACK = [{w:6.5,c:'3/4"',p:140},{w:8.5,c:'7/8"',p:200},{w:9.5,c:'7/8"',p:250},{w:12.5,c:'1"',p:360},{w:15,c:'1-1/8"',p:520},{w:18,c:'1-1/4"',p:680},{w:25,c:'1-1/2"',p:1150}]
+        .map(o=>({...o,mbl:+(o.w*5).toFixed(1),df:5,lab:'G-209A '+o.c,maker:'Crosby'}));
+  const CONN  = [{w:2.27,c:'Fr5',p:210},{w:4.54,c:'Fr10',p:330},{w:6.8,c:'Fr15',p:480},{w:11.34,c:'Fr25',p:820},{w:13.6,c:'Fr30',p:1020},{w:18.1,c:'Fr40',p:1480},{w:27.2,c:'Fr60',p:2450}]
+        .map(o=>({...o,mbl:+(o.w*5).toFixed(1),df:5,lab:'S-237 '+o.c,maker:'Crosby'}));
+  const MLINK = [{w:12,c:'MT-10',p:600},{w:21,c:'MT-13',p:880},{w:27.7,c:'A-345 1.50',p:1150},{w:31,c:'MT-16',p:1420},{w:48,c:'MT-20',p:2150},{w:60,c:'MT-22',p:3000}]
+        .map(o=>({...o,mbl:+(o.w*5).toFixed(1),df:5,lab:o.c,maker:o.c.startsWith('A')?'Crosby':'Gunnebo'}));
+
+  const $=id=>document.getElementById(id);
+  const fmt=(n,d=1)=>(+n).toFixed(d);
+  const money=n=>'₪'+Math.round(n).toLocaleString('en-US');
+
+  let DAF=1.15, SKL=1.25, COND='port';
+
+  // pick smallest item whose util<=target; else smallest non-overloaded; returns selection + next-up
+  function pick(cat, load, target){
+    let chosen=null;
+    for(const it of cat){ if(load/it.w <= target){ chosen=it; break; } }
+    if(!chosen){ for(const it of cat){ if(load/it.w <= 1.0){ chosen=it; break; } } }
+    if(!chosen) chosen=cat[cat.length-1];
+    const idx=cat.indexOf(chosen);
+    const next=cat[idx+1]||null;
+    return {it:chosen, next, util:load/chosen.w, load};
+  }
+  function stateOf(u){ return u>1?'over':(u>0.85?'marg':'ok'); }
+  function barColor(u){ return u>1?'var(--red)':(u>0.9?'var(--red)':(u>0.7?'var(--amber)':'var(--green)')); }
+
+  function compute(){
+    const W=+$('W').value, ang=+$('ang').value, split=+$('split').value/100;
+    const prio=+$('prio').value;                  // 0 cost .. 100 margin
+    const target = 0.70 + 0.25*(prio/100);         // target utilisation 0.95(cost)..0.70(margin)? invert:
+    const tgt = 0.95 - 0.25*(prio/100);            // prio0 -> .95 (cost) , prio100 -> .70 (margin)
+    const rad=ang*Math.PI/180, s=Math.sin(rad);
+
+    // per-leg static axial loads (aft pair carries 'split', fwd '1-split')
+    const aftStat=(W*split/2)/s, fwdStat=(W*(1-split)/2)/s;
+    const aftDes=aftStat*DAF*SKL, fwdDes=fwdStat*DAF*SKL;
+    const legMax=Math.max(aftDes,fwdDes);
+    const hook=W*DAF;
+
+    const selAft=pick(ROUND,aftDes,tgt), selFwd=pick(ROUND,fwdDes,tgt);
+    const selConn=pick(CONN,legMax,tgt), selShack=pick(SHACK,legMax,tgt);
+    // shackle must also satisfy MBL/3 >= dynamic per-leg (static*DAF); pick handles via WLL mostly
+    const selML=pick(MLINK,hook,tgt);
+
+    const items=[
+      {key:'strapA',title:'רצועה אחורית · AFT ×2',sel:selAft,qty:2,cat:ROUND},
+      {key:'strapF',title:'רצועה קדמית · FWD ×2',sel:selFwd,qty:2,cat:ROUND},
+      {key:'ml',title:'טבעת מסטר · MASTER LINK ×1',sel:selML,qty:1,cat:MLINK},
+      {key:'conn',title:'מחבר HP · S-237 ×4',sel:selConn,qty:4,cat:CONN},
+      {key:'shk',title:'שאקל · G-209A ×4',sel:selShack,qty:4,cat:SHACK},
+    ];
+
+    let total=0, safe=0, maxU=0;
+    items.forEach(o=>{ total+=o.sel.it.p*o.qty; maxU=Math.max(maxU,o.sel.util);
+      // "full margin" cost = item sized to <=0.70
+      const sg=pick(o.cat,o.sel.load,0.70); safe+=sg.it.p*o.qty; });
+
+    // metrics
+    $('mHook').innerHTML=fmt(hook,1)+'<small> t</small>';
+    $('mLeg').innerHTML=fmt(legMax,2)+'<small> t</small>';
+    $('mUtil').innerHTML=Math.round(maxU*100)+'<small>%</small>';
+    $('mCost').innerHTML=Math.round(total).toLocaleString('en-US')+'<small> ₪</small>';
+
+    const st=stateOf(maxU);
+    const sl=$('status');
+    sl.className='statusline '+(st==='over'?'s-over':st==='marg'?'s-marg':'s-ok');
+    sl.textContent = st==='over' ? '⚠ עומס יתר — נדרשת מידה גדולה יותר'
+                    : st==='marg' ? '◐ תקין · רכיבים בגבול הניצול'
+                    : '✓ תקין · מרווח טוב בכל הרכיבים';
+
+    // component cards
+    $('comps').innerHTML = items.map(o=>{
+      const u=o.sel.util, st=stateOf(u), pct=Math.min(u*100,118);
+      const tag = st==='over'?'<span class="tag t-over">OVERLOAD</span>'
+                : st==='marg'?'<span class="tag t-marg">בגבול · MARGINAL</span>'
+                : '<span class="tag t-ok">OK</span>';
+      let upg='';
+      if((st!=='ok' || u>0.78) && o.sel.next){
+        const n=o.sel.next, nu=o.sel.load/n.w, dCost=(n.p-o.sel.it.p)*o.qty;
+        upg=`<div class="upgrade">
+          <button class="chip" data-up="${o.key}">שדרוג ↑ ${n.lab}</button>
+          <div class="txt">+${money(dCost)} → ניצול <b>${Math.round(nu*100)}%</b>
+          (מרווח +${Math.round((u-nu)*100)} נק') · ערך מוסף: ${st==='marg'?'<b style="color:var(--amber)">בטיחות</b>':'<span style="color:var(--dim)">שולי</span>'}</div></div>`;
+      }
+      return `<div class="comp ${st}">${tag}
+        <div class="top">
+          <div class="nm">${o.title}<small>${o.sel.it.maker} · ${o.sel.it.lab}</small></div>
+          <div class="price">${money(o.sel.it.p*o.qty)}<small>${money(o.sel.it.p)} ×${o.qty}</small></div>
+        </div>
+        <div class="specs">
+          <span>WLL <b>${fmt(o.sel.it.w,o.sel.it.w<10?2:1)} t</b></span>
+          <span>MBL <b>${fmt(o.sel.it.mbl,0)} t</b> <span style="opacity:.6">(${o.sel.it.df}:1)</span></span>
+          <span>עומס <b>${fmt(o.sel.load,2)} t</b></span>
+        </div>
+        <div class="bar"><i style="width:${pct}%;background:${barColor(u)}"></i></div>
+        <div class="barlab"><span style="color:${barColor(u)}">ניצול ${Math.round(u*100)}%</span><span style="color:var(--dim)">SF ${fmt(o.sel.it.mbl/o.sel.load,1)}:1</span></div>
+        ${upg}</div>`;
+    }).join('');
+
+    // cost/value panel
+    $('cvCost').textContent=money(total);
+    $('cvSafe').textContent=money(safe);
+    const d=safe-total;
+    $('cvDelta').textContent=(d>=0?'+':'−')+money(Math.abs(d))+'  ('+(safe? Math.round(d/total*100):0)+'%)';
+    $('cvPin').style.insetInlineStart=Math.round((prio)*0.98+1)+'%';
+    $('cvNote').innerHTML = st==='over'
+      ? 'הערכה <b style="color:var(--red)">לא עומדת</b> בעומס — הגדל מידות או הקטן DAF/עומס.'
+      : maxU>0.85
+        ? 'הרכיב החלש בניצול <b style="color:var(--amber)">'+Math.round(maxU*100)+'%</b>. שדרוג מידה אחת מוסיף מרווח בעלות שמוצגת לעיל — שיקול עלות מול ערך.'
+        : 'כל הרכיבים במרווח נוח. הזזת מחוון <b>העדיפות</b> לכיוון "חיסכון" תקטין מידות ועלות עד גבול הניצול.';
+
+    drawAsm(W,ang,split,aftDes,fwdDes,selAft,selFwd,hook,selML);
+  }
+
+  function drawAsm(W,ang,split,ad,fd,sa,sf,hook,ml){
+    const teal='#2ec9c2',steel='#9fb6c6',dim='#6f8aa0',amb='#f1ab3a';
+    const ax=80, // apex x
+        hookY=22, baseY=176, ld=Math.cos(ang*Math.PI/180);
+    const pts=[[28,'A'],[100,'F'],[200,'F'],[272,'A']];
+    let legs='';
+    pts.forEach(([x,k])=>{
+      legs+=`<line x1="150" y1="${hookY+30}" x2="${x}" y2="${baseY}" stroke="${teal}" stroke-width="3.2"/>`+
+            `<circle cx="${x}" cy="${baseY}" r="3.4" fill="#0f2233" stroke="${amb}" stroke-width="1.6"/>`;
+    });
+    const html=`<svg viewBox="0 0 300 210">
+      <circle cx="150" cy="${hookY}" r="9" fill="none" stroke="${steel}" stroke-width="2.4"/>
+      <ellipse cx="150" cy="${hookY+24}" rx="8" ry="11" fill="none" stroke="${steel}" stroke-width="2.6"/>
+      ${legs}
+      <line x1="20" y1="${baseY+14}" x2="280" y2="${baseY+14}" stroke="${steel}" stroke-width="2"/>
+      <text x="150" y="14" fill="${dim}" font-family="monospace" font-size="8" text-anchor="middle">HOOK ${fmt(hook,1)}t</text>
+      <text x="150" y="${hookY+27}" fill="${amb}" font-family="monospace" font-size="7.5" text-anchor="middle">${ml.it.lab} ${fmt(ml.it.w,1)}t</text>
+      <text x="60" y="120" fill="${teal}" font-family="monospace" font-size="8" text-anchor="middle" transform="rotate(58 60 120)">AFT ${fmt(sa.it.w,0)}t · ${fmt(ad,1)}t</text>
+      <text x="238" y="120" fill="${teal}" font-family="monospace" font-size="8" text-anchor="middle" transform="rotate(-58 238 120)">FWD ${fmt(sf.it.w,0)}t · ${fmt(fd,1)}t</text>
+      <text x="150" y="${baseY+27}" fill="${dim}" font-family="monospace" font-size="7.5" text-anchor="middle">4× G-209A · USV ${fmt(W,1)}t</text>
+    </svg>`;
+    $('asm').innerHTML=html;
+  }
+
+  // ---- wiring ----
+  function bindRange(id,fmtFn){ const el=$(id),out=$(id+'v'); const upd=()=>{ if(out) out.textContent=fmtFn(el.value); compute(); }; el.addEventListener('input',upd); }
+  bindRange('W',v=>fmt(v,1)); bindRange('LCG',v=>fmt(v,3)); bindRange('split',v=>v);
+  bindRange('ang',v=>fmt(v,1)); 
+  $('prio').addEventListener('input',()=>{ const v=+$('prio').value; $('priov').textContent = v<33?'חיסכון':v>66?'מרווח':'איזון'; compute(); });
+
+  $('cond').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b)return;
+    [...$('cond').children].forEach(x=>x.classList.remove('on')); b.classList.add('on');
+    DAF=+b.dataset.daf; COND=b.dataset.k; compute(); });
+  $('skl').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b)return;
+    [...$('skl').children].forEach(x=>x.classList.remove('on')); b.classList.add('on');
+    SKL=+b.dataset.skl; $('sklv').textContent=fmt(SKL,2); compute(); });
+
+  // upgrade chips -> nudge priority toward margin (visual demo of choosing added value)
+  $('comps').addEventListener('click',e=>{ const c=e.target.closest('.chip'); if(!c)return;
+    const p=$('prio'); p.value=Math.min(100,+p.value+22); p.dispatchEvent(new Event('input')); });
+
+  const PRESETS={
+    port:{W:22,DAF:1.15,k:'port',ang:62,split:51,prio:50,LCG:5.107},
+    open:{W:22,DAF:1.30,k:'open',ang:62,split:51,prio:50,LCG:5.107},
+    inshore:{W:16.4,DAF:1.15,k:'inshore',ang:63,split:63,prio:50,LCG:4.959},
+    static:{W:22,DAF:1.00,k:'static',ang:62,split:51,prio:35,LCG:5.107},
+  };
+  $('presets').addEventListener('click',e=>{ const b=e.target.closest('.preset'); if(!b)return;
+    const P=PRESETS[b.dataset.p];
+    $('W').value=P.W; $('wv').textContent=fmt(P.W,1);
+    $('LCG').value=P.LCG; $('lcgv').textContent=fmt(P.LCG,3);
+    $('ang').value=P.ang; $('angv').textContent=fmt(P.ang,1);
+    $('split').value=P.split; $('splitv').textContent=P.split;
+    $('prio').value=P.prio; $('priov').textContent=P.prio<33?'חיסכון':P.prio>66?'מרווח':'איזון';
+    DAF=P.DAF;
+    [...$('cond').children].forEach(x=>x.classList.toggle('on',x.dataset.k===P.k));
+    compute();
+  });
+
+  compute();
+})();
+</script>
+</body>
+</html>
