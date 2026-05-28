@@ -59,6 +59,8 @@ input[type=number]{width:100%;background:#0b1722;border:1px solid var(--edge);co
 .seg button .d{display:block;font-family:var(--mono);font-size:10px;color:var(--teal);margin-top:3px}
 .seg button.on{border-color:var(--teal);background:#11323288;color:var(--ink)}
 .prio{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:3px}
+.derived{font-family:var(--mono);font-size:11px;color:var(--teal);background:#0e2030;border:1px solid var(--edge);border-radius:8px;padding:8px 10px;margin:0 0 12px;text-align:center;line-height:1.5}
+.derived b{color:var(--ink)}
 
 /* results */
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
@@ -146,16 +148,25 @@ footer{margin-top:26px;font-family:var(--mono);font-size:10px;color:var(--dim);t
           <input type="range" id="W" min="2" max="60" step="0.1" value="22">
         </label>
         <label class="field">
-          <span class="lab">LCG · מרכז כובד אורכי <span class="v"><span id="lcgv">5.107</span> m</span></span>
-          <input type="range" id="LCG" min="3" max="8" step="0.001" value="5.107">
+          <span class="lab">רצועה אחורית · מרחק ממרכז־כובד <span class="v"><span id="caftv">3.557</span> m</span></span>
+          <input type="range" id="caft" min="1.5" max="6" step="0.001" value="3.557">
         </label>
         <label class="field">
-          <span class="lab">חלוקת עומס · אחורי / קדמי <span class="v"><span id="splitv">51</span>%</span></span>
-          <input type="range" id="split" min="40" max="65" step="1" value="51">
+          <span class="lab">רצועה קדמית · מרחק ממרכז־כובד <span class="v"><span id="cfwdv">3.738</span> m</span></span>
+          <input type="range" id="cfwd" min="1.5" max="6" step="0.001" value="3.738">
+        </label>
+        <div class="derived" id="derived"></div>
+        <label class="field">
+          <span class="lab">אורך רצועה אחורית · LA <span class="v"><span id="lav">8.831</span> m</span></span>
+          <input type="range" id="la" min="4" max="14" step="0.001" value="8.831">
         </label>
         <label class="field">
-          <span class="lab">זווית רצועה · sling angle <span class="v"><span id="angv">62</span>°</span></span>
-          <input type="range" id="ang" min="45" max="78" step="0.5" value="62">
+          <span class="lab">אורך רצועה קדמית · LF <span class="v"><span id="lfv">8.192</span> m</span></span>
+          <input type="range" id="lf" min="4" max="14" step="0.001" value="8.192">
+        </label>
+        <label class="field">
+          <span class="lab">מחצית מפתח רוחבי · ½ spread <span class="v"><span id="bv">1.55</span> m</span></span>
+          <input type="range" id="b" min="0" max="4" step="0.001" value="1.55">
         </label>
 
         <div class="lab" style="font-size:13px;font-weight:600;margin:4px 0 6px">תנאי הרמה · מקדם דינמי DAF</div>
@@ -261,14 +272,20 @@ footer{margin-top:26px;font-family:var(--mono);font-size:10px;color:var(--dim);t
   function barColor(u){ return u>1?'var(--red)':(u>0.9?'var(--red)':(u>0.7?'var(--amber)':'var(--green)')); }
 
   function compute(){
-    const W=+$('W').value, ang=+$('ang').value, split=+$('split').value/100;
-    const prio=+$('prio').value;                  // 0 cost .. 100 margin
-    const target = 0.70 + 0.25*(prio/100);         // target utilisation 0.95(cost)..0.70(margin)? invert:
-    const tgt = 0.95 - 0.25*(prio/100);            // prio0 -> .95 (cost) , prio100 -> .70 (margin)
-    const rad=ang*Math.PI/180, s=Math.sin(rad);
-
-    // per-leg static axial loads (aft pair carries 'split', fwd '1-split')
-    const aftStat=(W*split/2)/s, fwdStat=(W*(1-split)/2)/s;
+    const W=+$('W').value;
+    const aftD=+$('caft').value, fwdD=+$('cfwd').value, b=+$('b').value, LA=+$('la').value, LF=+$('lf').value;
+    const LBE=aftD+fwdD;
+    const aftFrac=fwdD/LBE;                         // aft reaction fraction (moment balance about CoG)
+    const prio=+$('prio').value;                    // 0 cost .. 100 margin
+    const tgt = 0.95 - 0.25*(prio/100);             // target utilisation 0.95(cost)..0.70(margin)
+    // derive true 3D sling angle: horizontal run = sqrt(longitudinal^2 + transverse^2)
+    const runA=Math.sqrt(aftD*aftD+b*b), runF=Math.sqrt(fwdD*fwdD+b*b);
+    const okA=LA>runA+0.005, okF=LF>runF+0.005, geomBad=!okA||!okF;
+    const angA=okA?Math.acos(runA/LA):0, angF=okF?Math.acos(runF/LF):0;   // radians
+    const HA=okA?Math.sqrt(LA*LA-runA*runA):0, HF=okF?Math.sqrt(LF*LF-runF*runF):0;
+    const dH=Math.abs(HA-HF);
+    const sA=Math.sin(angA)||1, sF=Math.sin(angF)||1;
+    const aftStat=(W*aftFrac/2)/sA, fwdStat=(W*(1-aftFrac)/2)/sF;
     const aftDes=aftStat*DAF*SKL, fwdDes=fwdStat*DAF*SKL;
     const legMax=Math.max(aftDes,fwdDes);
     const hook=W*DAF;
@@ -297,10 +314,11 @@ footer{margin-top:26px;font-family:var(--mono);font-size:10px;color:var(--dim);t
     $('mUtil').innerHTML=Math.round(maxU*100)+'<small>%</small>';
     $('mCost').innerHTML=Math.round(total).toLocaleString('en-US')+'<small> ₪</small>';
 
-    const st=stateOf(maxU);
+    const st=geomBad?'over':stateOf(maxU);
     const sl=$('status');
     sl.className='statusline '+(st==='over'?'s-over':st==='marg'?'s-marg':'s-ok');
-    sl.textContent = st==='over' ? '⚠ עומס יתר — נדרשת מידה גדולה יותר'
+    sl.textContent = geomBad ? '⚠ גיאומטריה לא תקפה — רצועה קצרה מהמרחק לנקודה'
+                    : st==='over' ? '⚠ עומס יתר — נדרשת מידה גדולה יותר'
                     : st==='marg' ? '◐ תקין · רכיבים בגבול הניצול'
                     : '✓ תקין · מרווח טוב בכל הרכיבים';
 
@@ -345,7 +363,11 @@ footer{margin-top:26px;font-family:var(--mono);font-size:10px;color:var(--dim);t
         ? 'הרכיב החלש בניצול <b style="color:var(--amber)">'+Math.round(maxU*100)+'%</b>. שדרוג מידה אחת מוסיף מרווח בעלות שמוצגת לעיל — שיקול עלות מול ערך.'
         : 'כל הרכיבים במרווח נוח. הזזת מחוון <b>העדיפות</b> לכיוון "חיסכון" תקטין מידות ועלות עד גבול הניצול.';
 
-    drawAsm(W,ang,split,aftDes,fwdDes,selAft,selFwd,hook,selML);
+    const degA=angA*180/Math.PI, degF=angF*180/Math.PI;
+    $('derived').innerHTML = geomBad
+      ? `<b style="color:var(--red)">⚠ רצועה קצרה מדי</b> — האורך קטן מהמרחק האלכסוני לנקודת ההרמה`
+      : `L.B.E <b>${fmt(LBE,3)} m</b> · חלוקה א/ק <b>${Math.round(aftFrac*100)} / ${Math.round((1-aftFrac)*100)}%</b><br>זוויות (מחושב) <b>${fmt(degA,1)}° / ${fmt(degF,1)}°</b> · גובה וו <b>${fmt(HA,2)} m</b> · ΔH <b>${fmt(dH,2)} m</b>`;
+    drawAsm(W,degA,aftFrac,aftDes,fwdDes,selAft,selFwd,hook,selML);
   }
 
   function drawAsm(W,ang,split,ad,fd,sa,sf,hook,ml){
@@ -373,9 +395,13 @@ footer{margin-top:26px;font-family:var(--mono);font-size:10px;color:var(--dim);t
   }
 
   // ---- wiring ----
-  function bindRange(id,fmtFn){ const el=$(id),out=$(id+'v'); const upd=()=>{ if(out) out.textContent=fmtFn(el.value); compute(); }; el.addEventListener('input',upd); }
-  bindRange('W',v=>fmt(v,1)); bindRange('LCG',v=>fmt(v,3)); bindRange('split',v=>v);
-  bindRange('ang',v=>fmt(v,1)); 
+  function bindRange(id,spanId,fmtFn){ const el=$(id),out=$(spanId); const upd=()=>{ if(out) out.textContent=fmtFn(el.value); compute(); }; el.addEventListener('input',upd); }
+  bindRange('W','wv',v=>fmt(v,1));
+  bindRange('caft','caftv',v=>fmt(v,3));
+  bindRange('cfwd','cfwdv',v=>fmt(v,3));
+  bindRange('la','lav',v=>fmt(v,3));
+  bindRange('lf','lfv',v=>fmt(v,3));
+  bindRange('b','bv',v=>fmt(v,3));
   $('prio').addEventListener('input',()=>{ const v=+$('prio').value; $('priov').textContent = v<33?'חיסכון':v>66?'מרווח':'איזון'; compute(); });
 
   $('cond').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b)return;
@@ -390,17 +416,19 @@ footer{margin-top:26px;font-family:var(--mono);font-size:10px;color:var(--dim);t
     const p=$('prio'); p.value=Math.min(100,+p.value+22); p.dispatchEvent(new Event('input')); });
 
   const PRESETS={
-    port:{W:22,DAF:1.15,k:'port',ang:62,split:51,prio:50,LCG:5.107},
-    open:{W:22,DAF:1.30,k:'open',ang:62,split:51,prio:50,LCG:5.107},
-    inshore:{W:16.4,DAF:1.15,k:'inshore',ang:63,split:63,prio:50,LCG:4.959},
-    static:{W:22,DAF:1.00,k:'static',ang:62,split:51,prio:35,LCG:5.107},
+    port:{W:22,DAF:1.15,k:'port',la:8.831,lf:8.192,b:1.55,caft:3.557,cfwd:3.738,prio:50},
+    open:{W:22,DAF:1.30,k:'open',la:8.831,lf:8.192,b:1.55,caft:3.557,cfwd:3.738,prio:50},
+    inshore:{W:16.4,DAF:1.15,k:'inshore',la:8.831,lf:8.192,b:1.55,caft:3.557,cfwd:3.738,prio:50},
+    static:{W:22,DAF:1.00,k:'static',la:8.831,lf:8.192,b:1.55,caft:3.557,cfwd:3.738,prio:35},
   };
   $('presets').addEventListener('click',e=>{ const b=e.target.closest('.preset'); if(!b)return;
     const P=PRESETS[b.dataset.p];
     $('W').value=P.W; $('wv').textContent=fmt(P.W,1);
-    $('LCG').value=P.LCG; $('lcgv').textContent=fmt(P.LCG,3);
-    $('ang').value=P.ang; $('angv').textContent=fmt(P.ang,1);
-    $('split').value=P.split; $('splitv').textContent=P.split;
+    $('caft').value=P.caft; $('caftv').textContent=fmt(P.caft,3);
+    $('cfwd').value=P.cfwd; $('cfwdv').textContent=fmt(P.cfwd,3);
+    $('la').value=P.la; $('lav').textContent=fmt(P.la,3);
+    $('lf').value=P.lf; $('lfv').textContent=fmt(P.lf,3);
+    $('b').value=P.b; $('bv').textContent=fmt(P.b,3);
     $('prio').value=P.prio; $('priov').textContent=P.prio<33?'חיסכון':P.prio>66?'מרווח':'איזון';
     DAF=P.DAF;
     [...$('cond').children].forEach(x=>x.classList.toggle('on',x.dataset.k===P.k));
