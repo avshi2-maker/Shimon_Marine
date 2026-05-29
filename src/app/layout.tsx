@@ -1,36 +1,22 @@
-import type { Metadata } from 'next';
-import { Heebo, Saira_Condensed, JetBrains_Mono } from 'next/font/google';
-import './globals.css';
-
-const heebo = Heebo({
-  subsets: ['hebrew', 'latin'],
-  weight: ['300', '400', '600', '800'],
-  variable: '--font-heebo',
-  display: 'swap',
-});
-
-const saira = Saira_Condensed({
-  subsets: ['latin'],
-  weight: ['500', '700'],
-  variable: '--font-saira',
-  display: 'swap',
-});
-
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-mono',
-  display: 'swap',
-});
+﻿import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'מתכנן ערכת הרמה ימית · Marine Lifting Set Designer',
-  description: 'GL Noble Denton 0027/ND · SpanSet + Crosby parametric designer',
+  title: "מתכנן ערכת הרמה ימית · Marine Lifting Set Designer",
+  description: "GL Noble Denton 0027/ND · SpanSet + Crosby parametric designer",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="he" dir="rtl" className={`${heebo.variable} ${saira.variable} ${mono.variable}`}>
+    <html lang="he" dir="rtl">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;800&family=Saira+Condensed:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
