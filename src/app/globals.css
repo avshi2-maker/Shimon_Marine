@@ -157,3 +157,11 @@ footer { margin-top: 26px; font-family: var(--mono); font-size: 10px; color: var
 
 .fse { margin-top: 11px; font-size: 11.5px; line-height: 1.55; color: var(--amber); background: #2a2008; border: 1px solid #6b521f; border-radius: 9px; padding: 9px 11px; }
 .fse b { color: #ffcf7a; }
+
+/* --- header: firm name + clock --- */
+.titles .firm { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--teal); font-weight: 700; margin-bottom: 3px; }
+.headright { margin-inline-start: auto; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.headright .badges { margin-inline-start: 0; }
+.clock { text-align: center; border: 1px solid var(--edge); border-radius: 10px; padding: 6px 14px; background: #0e2030; min-width: 132px; }
+.clock .time { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--ink); letter-spacing: 1px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.clock .date { font-size: 10.5px; color: var(--dim); margin-top: 2px; }
