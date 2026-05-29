@@ -125,3 +125,35 @@ input[type=range] { width: 100%; accent-color: var(--teal); height: 4px; }
 .note code { font-family: var(--mono); color: var(--teal); }
 
 footer { margin-top: 26px; font-family: var(--mono); font-size: 10px; color: var(--dim); text-align: center; letter-spacing: 1px; line-height: 1.8; }
+
+/* --- loading / solver / balance additions --- */
+.grid { grid-template-columns: 340px 1fr 340px; }
+@media (max-width: 1180px) { .grid { grid-template-columns: 1fr; } }
+.col { display: flex; flex-direction: column; gap: 16px; }
+
+.sub { font-family: var(--disp); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); border-bottom: 1px dashed var(--edge); padding-bottom: 4px; margin: 14px 0 9px; }
+.sub:first-child { margin-top: 0; }
+
+.numgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; }
+.numfield { display: flex; flex-direction: column; gap: 3px; }
+.numfield span { font-size: 11px; color: var(--dim); font-weight: 600; }
+.numfield input { width: 100%; font-family: var(--mono); font-size: 13px; background: #0b1722; color: var(--ink); border: 1px solid var(--edge); border-radius: 7px; padding: 6px 8px; }
+.numfield input:focus { outline: none; border-color: var(--teal); }
+
+.loadtot { margin-top: 13px; font-family: var(--mono); font-size: 12px; color: var(--dim); background: #0e2030; border: 1px solid var(--edge); border-radius: 8px; padding: 9px 11px; text-align: center; line-height: 1.6; }
+.loadtot b { color: var(--teal); }
+
+.hint { font-size: 11px; color: var(--dim); line-height: 1.5; margin-top: 10px; border-top: 1px solid var(--edge); padding-top: 9px; }
+
+.bgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.bcell { background: #0e2030; border: 1px solid var(--edge); border-radius: 9px; padding: 7px 10px; }
+.bcell .bk { display: block; font-size: 10.5px; color: var(--dim); font-weight: 600; }
+.bcell .bv { font-family: var(--mono); font-size: 14px; font-weight: 700; }
+
+.trim { margin-top: 11px; font-family: var(--disp); letter-spacing: 0.5px; font-size: 13px; font-weight: 700; text-align: center; padding: 9px 12px; border-radius: 9px; }
+.trim.ok { background: #0e3326; color: var(--green); border: 1px solid #1c6b4d; }
+.trim.ok b { color: var(--ink); }
+.trim.bad { background: #330f0c; color: var(--red); border: 1px solid #7a2b22; }
+
+.fse { margin-top: 11px; font-size: 11.5px; line-height: 1.55; color: var(--amber); background: #2a2008; border: 1px solid #6b521f; border-radius: 9px; padding: 9px 11px; }
+.fse b { color: #ffcf7a; }

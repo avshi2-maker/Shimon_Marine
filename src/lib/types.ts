@@ -9,7 +9,7 @@ export type Component = {
   p: number;     // indicative price (ILS)
   lab: string;   // display label
   maker: Maker;
-  c?: string;    // catalogue code (e.g. '1"', 'A-345')
+  c?: string;    // catalogue code
 };
 
 export type Selection = {
@@ -20,48 +20,65 @@ export type Selection = {
 };
 
 export type LiftCondition = 'open' | 'port' | 'inshore' | 'static';
-
 export type CompKey = 'strapA' | 'strapF' | 'ml' | 'conn' | 'shk';
+export type SolveMode = 'H' | 'LA';
 
 export type Inputs = {
-  W: number;
-  caft: number;   // aft strap from CoG (m)
-  cfwd: number;   // fwd strap from CoG (m)
-  la: number;     // aft sling length (m)
-  lf: number;     // fwd sling length (m)
-  b: number;      // transverse ½ spread (m)
-  cond: LiftCondition;
-  daf: number;
-  skl: number;
-  prio: number;   // 0 cost ↔ 100 margin
+  // --- loading: lightship (empty boat) ---
+  lightW: number;  lightLCG: number;  lightVCG: number;
+  // --- loading: fuel (slack tank → free surface) ---
+  fuelCap: number; fuelFill: number; fuelX: number; fuelZ: number; fuelL: number; fuelB: number;
+  // --- loading: payload / cargo ---
+  payW: number;    payX: number;     payZ: number;
+  // --- lift points (welded eyes, fixed on hull) ---
+  xAft: number;    xFwd: number;     dHeyes: number;  zEye: number;  b: number;
+  // --- geometry solver (single constraint) ---
+  mode: SolveMode;  H: number;        LA: number;
+  // --- lift condition ---
+  cond: LiftCondition; daf: number;   skl: number;     prio: number;
+};
+
+export type Loading = {
+  W: number;       // total lift weight (t)
+  LCG: number;     // longitudinal CoG from datum (m)
+  VCG: number;     // effective vertical CoG incl. free surface (m)
+  vcgSolid: number;// solid VCG before free surface (m)
+  fseRise: number; // free-surface virtual rise of VCG (m)
+  slack: boolean;  // is a tank partly filled?
+  fuelW: number;   // current fuel weight (t)
 };
 
 export type Geometry = {
-  LBE: number;
-  aftFrac: number;
-  angA: number;   // radians
+  aAft: number;    // aft strap → CoG, longitudinal (m)
+  fFwd: number;    // fwd strap → CoG, longitudinal (m)
+  aftFrac: number; // aft reaction fraction
+  LBE: number;     // longitudinal base between eyes (m)
+  LA: number;      // aft sling length (m)
+  LF: number;      // fwd sling length (m)
+  HA: number;      // apex above aft eye (m)
+  HF: number;      // apex above fwd eye (m)
+  zApex: number;   // apex height above aft-eye datum (m)
+  angA: number;    // aft bottom angle (rad)
   angF: number;
   degA: number;
   degF: number;
-  HA: number;     // m
-  HF: number;
-  dH: number;
-  geomBad: boolean;
+  clearance: number; // hook → CoG vertical clearance (pendulum margin, m)
+  cogBetween: boolean; // CoG between the lift points?
+  reach: boolean;      // constraint geometrically valid?
+  geomBad: boolean;    // any blocking geometry problem
 };
 
 export type Loads = {
-  aftStat: number;
-  fwdStat: number;
-  aftDes: number;
-  fwdDes: number;
-  legMax: number;
-  hook: number;
+  aftStat: number; fwdStat: number;
+  aftDes: number;  fwdDes: number;
+  legMax: number;  hook: number;
 };
 
 export type Selections = Record<CompKey, Selection>;
 
 export type DesignResult = {
   inputs: Inputs;
+  loading: Loading;
   geom: Geometry;
   loads: Loads;
   sel: Selections;

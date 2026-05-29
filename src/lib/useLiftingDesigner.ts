@@ -5,33 +5,30 @@ import type { Inputs, LiftCondition, DesignResult, Selections } from './types';
 import { QTY } from './types';
 import { ROUND, SHACK, CONN, MLINK } from './catalogs';
 import { pick, stateOf, targetFromPrio } from './selection';
-import { computeGeometry, computeLoads } from './geometry';
+import { computeLoading } from './loading';
+import { solveGeometry, computeLoads } from './geometry';
 
 const DAF_BY_COND: Record<LiftCondition, number> = {
-  open: 1.30,
-  port: 1.15,
-  inshore: 1.15,
-  static: 1.00,
+  open: 1.30, port: 1.15, inshore: 1.15, static: 1.00,
 };
 
+// defaults tuned so the loaded condition ≈ Ginton 602M (W 22 t, LCG ≈ 5.10)
 const DEFAULTS: Inputs = {
-  W: 22,
-  caft: 3.557, cfwd: 3.738,
-  la: 8.831, lf: 8.192,
-  b: 1.55,
-  cond: 'port',
-  daf: 1.15,
-  skl: 1.25,
-  prio: 50,
+  lightW: 14, lightLCG: 5.0, lightVCG: 1.45,
+  fuelCap: 6, fuelFill: 80, fuelX: 5.0, fuelZ: 0.5, fuelL: 2.0, fuelB: 1.8,
+  payW: 3.2, payX: 5.7, payZ: 1.3,
+  xAft: 1.55, xFwd: 8.845, dHeyes: 0.81, zEye: 1.8, b: 1.55,
+  mode: 'LA', H: 7.93, LA: 8.831,
+  cond: 'port', daf: 1.15, skl: 1.25, prio: 50,
 };
 
 export type PresetKey = 'port' | 'open' | 'inshore' | 'static';
 
 export const PRESETS: Record<PresetKey, Inputs> = {
-  port:    { ...DEFAULTS, cond: 'port',    daf: 1.15, W: 22 },
-  open:    { ...DEFAULTS, cond: 'open',    daf: 1.30, W: 22 },
-  inshore: { ...DEFAULTS, cond: 'inshore', daf: 1.15, W: 16.4 },
-  static:  { ...DEFAULTS, cond: 'static',  daf: 1.00, W: 22, prio: 35 },
+  port:    { ...DEFAULTS },
+  open:    { ...DEFAULTS, cond: 'open',    daf: 1.30 },
+  inshore: { ...DEFAULTS, cond: 'inshore', daf: 1.15, fuelFill: 0, payW: 0 },
+  static:  { ...DEFAULTS, cond: 'static',  daf: 1.00, prio: 35 },
 };
 
 export function useLiftingDesigner() {
@@ -49,20 +46,18 @@ export function useLiftingDesigner() {
     []
   );
 
-  const applyPreset = useCallback(
-    (key: PresetKey) => setInputs(PRESETS[key]),
-    []
-  );
+  const applyPreset = useCallback((key: PresetKey) => setInputs(PRESETS[key]), []);
 
   const upgradeSelection = useCallback(() => {
-    // nudges priority toward "margin" — used by the upgrade chip
     setInputs(prev => ({ ...prev, prio: Math.min(100, prev.prio + 22) }));
   }, []);
 
   const result = useMemo<DesignResult>(() => {
-    const geom = computeGeometry(inputs);
-    const loads = computeLoads(inputs, geom);
+    const loading = computeLoading(inputs);
+    const geom = solveGeometry(inputs, loading.LCG, loading.VCG);
+    const loads = computeLoads(inputs, geom, loading.W);
     const tgt = targetFromPrio(inputs.prio);
+
     const sel: Selections = {
       strapA: pick(ROUND, loads.aftDes, tgt),
       strapF: pick(ROUND, loads.fwdDes, tgt),
@@ -78,14 +73,12 @@ export function useLiftingDesigner() {
       maxU = Math.max(maxU, s.util);
       const cat = k === 'strapA' || k === 'strapF' ? ROUND
                 : k === 'ml' ? MLINK
-                : k === 'conn' ? CONN
-                : SHACK;
-      const sg = pick(cat, s.load, 0.70);
-      safe += sg.it.p * q;
+                : k === 'conn' ? CONN : SHACK;
+      safe += pick(cat, s.load, 0.70).it.p * q;
     });
 
     const state = geom.geomBad ? 'over' : stateOf(maxU);
-    return { inputs, geom, loads, sel, total, safe, maxU, state };
+    return { inputs, loading, geom, loads, sel, total, safe, maxU, state };
   }, [inputs]);
 
   return { inputs, update, setCondition, applyPreset, upgradeSelection, result };

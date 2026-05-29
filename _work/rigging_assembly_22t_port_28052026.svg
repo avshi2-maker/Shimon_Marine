@@ -1,0 +1,435 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.0.dtd" viewBox="0 0 1684 1191" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1684" height="1191" fill="#ffffff"/>
+<g inkscape:groupmode="layer" inkscape:label="00 Frame" id="layer-frame">
+<rect x="10" y="10" width="1664" height="1171" fill="none" stroke="#16213e" stroke-width="2.2" rx="0"/>
+<rect x="26" y="26" width="1632" height="1139" fill="none" stroke="#16213e" stroke-width="0.8" rx="0"/>
+<text x="128.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >1</text>
+<text x="128.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >1</text>
+<text x="332.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >2</text>
+<text x="332.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >2</text>
+<line x1="230.0" y1="26" x2="230.0" y2="36" stroke="#16213e" stroke-width="0.6"/>
+<line x1="230.0" y1="1155" x2="230.0" y2="1165" stroke="#16213e" stroke-width="0.6"/>
+<text x="536.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >3</text>
+<text x="536.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >3</text>
+<line x1="434.0" y1="26" x2="434.0" y2="36" stroke="#16213e" stroke-width="0.6"/>
+<line x1="434.0" y1="1155" x2="434.0" y2="1165" stroke="#16213e" stroke-width="0.6"/>
+<text x="740.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >4</text>
+<text x="740.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >4</text>
+<line x1="638.0" y1="26" x2="638.0" y2="36" stroke="#16213e" stroke-width="0.6"/>
+<line x1="638.0" y1="1155" x2="638.0" y2="1165" stroke="#16213e" stroke-width="0.6"/>
+<text x="944.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >5</text>
+<text x="944.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >5</text>
+<line x1="842.0" y1="26" x2="842.0" y2="36" stroke="#16213e" stroke-width="0.6"/>
+<line x1="842.0" y1="1155" x2="842.0" y2="1165" stroke="#16213e" stroke-width="0.6"/>
+<text x="1148.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >6</text>
+<text x="1148.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >6</text>
+<line x1="1046.0" y1="26" x2="1046.0" y2="36" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1046.0" y1="1155" x2="1046.0" y2="1165" stroke="#16213e" stroke-width="0.6"/>
+<text x="1352.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >7</text>
+<text x="1352.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >7</text>
+<line x1="1250.0" y1="26" x2="1250.0" y2="36" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1250.0" y1="1155" x2="1250.0" y2="1165" stroke="#16213e" stroke-width="0.6"/>
+<text x="1556.0" y="38" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >8</text>
+<text x="1556.0" y="1161" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >8</text>
+<line x1="1454.0" y1="26" x2="1454.0" y2="36" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1454.0" y1="1155" x2="1454.0" y2="1165" stroke="#16213e" stroke-width="0.6"/>
+<text x="35" y="123.91666666666667" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >F</text>
+<text x="1649" y="123.91666666666667" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >F</text>
+<text x="35" y="313.75" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >E</text>
+<text x="1649" y="313.75" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >E</text>
+<line x1="26" y1="215.83333333333334" x2="40" y2="215.83333333333334" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1644" y1="215.83333333333334" x2="1658" y2="215.83333333333334" stroke="#16213e" stroke-width="0.6"/>
+<text x="35" y="503.5833333333333" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >D</text>
+<text x="1649" y="503.5833333333333" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >D</text>
+<line x1="26" y1="405.6666666666667" x2="40" y2="405.6666666666667" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1644" y1="405.6666666666667" x2="1658" y2="405.6666666666667" stroke="#16213e" stroke-width="0.6"/>
+<text x="35" y="693.4166666666666" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >C</text>
+<text x="1649" y="693.4166666666666" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >C</text>
+<line x1="26" y1="595.5" x2="40" y2="595.5" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1644" y1="595.5" x2="1658" y2="595.5" stroke="#16213e" stroke-width="0.6"/>
+<text x="35" y="883.25" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >B</text>
+<text x="1649" y="883.25" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >B</text>
+<line x1="26" y1="785.3333333333334" x2="40" y2="785.3333333333334" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1644" y1="785.3333333333334" x2="1658" y2="785.3333333333334" stroke="#16213e" stroke-width="0.6"/>
+<text x="35" y="1073.0833333333333" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >A</text>
+<text x="1649" y="1073.0833333333333" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >A</text>
+<line x1="26" y1="975.1666666666666" x2="40" y2="975.1666666666666" stroke="#16213e" stroke-width="0.6"/>
+<line x1="1644" y1="975.1666666666666" x2="1658" y2="975.1666666666666" stroke="#16213e" stroke-width="0.6"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="01 Title" id="layer-title">
+<text x="842.0" y="78" font-size="23" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >LOAD CASE — 22 TON · PORT RECOVERY (0 wave → deck),  LCG = 5.107 [m]</text>
+<text x="842.0" y="100" font-size="12" text-anchor="middle" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >LIFTING SET FOR 22 t  ·  DAF 1.15 (sheltered / inshore recovery)  ·  parameters &amp; constraints per Ginton dwg 287-235</text>
+<line x1="44" y1="110" x2="1640" y2="110" stroke="#16213e" stroke-width="1"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="10 Assembly Front" id="layer-front">
+<rect x="44" y="122" width="712" height="648" fill="none" stroke="#16213e" stroke-width="1" rx="0"/>
+<rect x="44" y="122" width="712" height="20" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="52" y="137" font-size="10.5" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >VIEW A — FRONT ELEVATION (bow-on)   ·   4-leg bridle to single hook</text>
+<circle cx="400" cy="174" r="11" fill="#fff" stroke="#5d6d7e" stroke-width="2.4"/>
+<path d="M 400 185 q 17 7 9 24 q -6 13 -19 7" fill="none" stroke="#5d6d7e" stroke-width="2.8"/>
+<text x="422" y="178" font-size="9.5" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >CRANE HOOK</text>
+<ellipse cx="400" cy="214" rx="13" ry="19" fill="none" stroke="#5d6d7e" stroke-width="3.4"/>
+<ellipse cx="387" cy="244" rx="8" ry="12" fill="none" stroke="#5d6d7e" stroke-width="2.6"/>
+<ellipse cx="413" cy="244" rx="8" ry="12" fill="none" stroke="#5d6d7e" stroke-width="2.6"/>
+<line x1="387" y1="256" x2="100" y2="620" stroke="#1f6f8b" stroke-width="5"/>
+<line x1="387" y1="256" x2="250" y2="620" stroke="#1f6f8b" stroke-width="5"/>
+<line x1="413" y1="256" x2="550" y2="620" stroke="#1f6f8b" stroke-width="5"/>
+<line x1="413" y1="256" x2="700" y2="620" stroke="#1f6f8b" stroke-width="5"/>
+<path d="M 100 620 C 91 620 91 634 100 636 C 109 634 109 620 100 620" fill="none" stroke="#5d6d7e" stroke-width="2.4"/>
+<path d="M 92 648 a8 8 0 1 1 16 0" fill="none" stroke="#5d6d7e" stroke-width="2.8"/>
+<line x1="92" y1="648" x2="108" y2="648" stroke="#5d6d7e" stroke-width="2.6"/>
+<circle cx="92" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="108" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="100" cy="658" r="3.2" fill="#22304a" stroke="#22304a" stroke-width="1"/>
+<line x1="88" y1="662" x2="112" y2="662" stroke="#5d6d7e" stroke-width="2.5"/>
+<path d="M 250 620 C 241 620 241 634 250 636 C 259 634 259 620 250 620" fill="none" stroke="#5d6d7e" stroke-width="2.4"/>
+<path d="M 242 648 a8 8 0 1 1 16 0" fill="none" stroke="#5d6d7e" stroke-width="2.8"/>
+<line x1="242" y1="648" x2="258" y2="648" stroke="#5d6d7e" stroke-width="2.6"/>
+<circle cx="242" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="258" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="250" cy="658" r="3.2" fill="#22304a" stroke="#22304a" stroke-width="1"/>
+<line x1="238" y1="662" x2="262" y2="662" stroke="#5d6d7e" stroke-width="2.5"/>
+<path d="M 550 620 C 541 620 541 634 550 636 C 559 634 559 620 550 620" fill="none" stroke="#5d6d7e" stroke-width="2.4"/>
+<path d="M 542 648 a8 8 0 1 1 16 0" fill="none" stroke="#5d6d7e" stroke-width="2.8"/>
+<line x1="542" y1="648" x2="558" y2="648" stroke="#5d6d7e" stroke-width="2.6"/>
+<circle cx="542" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="558" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="550" cy="658" r="3.2" fill="#22304a" stroke="#22304a" stroke-width="1"/>
+<line x1="538" y1="662" x2="562" y2="662" stroke="#5d6d7e" stroke-width="2.5"/>
+<path d="M 700 620 C 691 620 691 634 700 636 C 709 634 709 620 700 620" fill="none" stroke="#5d6d7e" stroke-width="2.4"/>
+<path d="M 692 648 a8 8 0 1 1 16 0" fill="none" stroke="#5d6d7e" stroke-width="2.8"/>
+<line x1="692" y1="648" x2="708" y2="648" stroke="#5d6d7e" stroke-width="2.6"/>
+<circle cx="692" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="708" cy="648" r="2" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<circle cx="700" cy="658" r="3.2" fill="#22304a" stroke="#22304a" stroke-width="1"/>
+<line x1="688" y1="662" x2="712" y2="662" stroke="#5d6d7e" stroke-width="2.5"/>
+<line x1="74" y1="662" x2="726" y2="662" stroke="#5d6d7e" stroke-width="2.5"/>
+<text x="400" y="682" font-size="9" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" font-style="italic">USV deck / hull lift eyes</text>
+<text x="100" y="696" font-size="7.8" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >FR 11+595</text>
+<text x="250" y="696" font-size="7.8" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >FR 2+50</text>
+<text x="550" y="696" font-size="7.8" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >FR 2+50</text>
+<text x="700" y="696" font-size="7.8" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >FR 11+595</text>
+<text x="185.5" y="443.0" font-size="9.4" text-anchor="start" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(46 185.5 443.0)">AFT sling</text>
+<text x="197.5" y="456.0" font-size="7.8" text-anchor="start" fill="#1f6f8b" font-weight="normal" font-family="Helvetica, Arial, sans-serif"  transform="rotate(46 197.5 456.0)">L = 8.831 m  (aft, ×2)</text>
+<text x="209.5" y="468.0" font-size="7.8" text-anchor="start" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(46 209.5 468.0)">WLL 12 t · MBL 84 t</text>
+<text x="487.5" y="443.0" font-size="9.4" text-anchor="start" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(-56 487.5 443.0)">FWD sling</text>
+<text x="487.5" y="456.0" font-size="7.8" text-anchor="start" fill="#1f6f8b" font-weight="normal" font-family="Helvetica, Arial, sans-serif"  transform="rotate(-56 487.5 456.0)">L = 8.192 m  (fwd, ×2)</text>
+<text x="487.5" y="468.0" font-size="7.8" text-anchor="start" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(-56 487.5 468.0)">WLL 10 t · MBL 70 t</text>
+<line x1="390" y1="214" x2="330" y2="198" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="390" cy="214" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="330" cy="198" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="330" y="202.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >3</text>
+<line x1="381" y1="244" x2="330" y2="232" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="381" cy="244" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="330" cy="232" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="330" y="236.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >4</text>
+<line x1="235.5" y1="435.0" x2="54" y2="403.0" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="235.5" cy="435.0" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="54" cy="403.0" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="54" y="407.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >1</text>
+<line x1="489.5" y1="435.0" x2="596" y2="403.0" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="489.5" cy="435.0" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="596" cy="403.0" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="596" y="407.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >2</text>
+<line x1="550" y1="624" x2="590" y2="592" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="550" cy="624" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="590" cy="592" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="590" y="596.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >5</text>
+<line x1="708" y1="646" x2="740" y2="648" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="708" cy="646" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="740" cy="648" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="740" y="652.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >6</text>
+<line x1="250" y1="660" x2="210" y2="670" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="250" cy="660" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="210" cy="670" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="210" y="674.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >7</text>
+<text x="54" y="760" font-size="7.8" text-anchor="start" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" font-style="italic">Soft slings choked/eyed to Crosby end fittings · matched pairs · level lift ≤ 2°</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="20 Plan" id="layer-plan">
+<rect x="768" y="122" width="456" height="318" fill="none" stroke="#16213e" stroke-width="1" rx="0"/>
+<rect x="768" y="122" width="456" height="20" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="776" y="137" font-size="10.5" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >VIEW B — PLAN  (lift-point pattern)</text>
+<path d="M 876.0 182 L 1116.0 182 L 1112.0 372 L 880.0 372 Z" fill="#eef3f9" stroke="#5d6d7e" stroke-width="1.2"/>
+<line x1="996.0" y1="275.1" x2="876.0" y2="182" stroke="#1f6f8b" stroke-width="2.5"/>
+<circle cx="876.0" cy="182" r="4" fill="#fff" stroke="#0e6655" stroke-width="2"/>
+<line x1="996.0" y1="275.1" x2="1116.0" y2="182" stroke="#1f6f8b" stroke-width="2.5"/>
+<circle cx="1116.0" cy="182" r="4" fill="#fff" stroke="#0e6655" stroke-width="2"/>
+<line x1="996.0" y1="275.1" x2="880.0" y2="372" stroke="#1f6f8b" stroke-width="2.5"/>
+<circle cx="880.0" cy="372" r="4" fill="#fff" stroke="#0e6655" stroke-width="2"/>
+<line x1="996.0" y1="275.1" x2="1112.0" y2="372" stroke="#1f6f8b" stroke-width="2.5"/>
+<circle cx="1112.0" cy="372" r="4" fill="#fff" stroke="#0e6655" stroke-width="2"/>
+<circle cx="996.0" cy="275.1" r="7" fill="#fff" stroke="#b03a2e" stroke-width="1.4"/>
+<path d="M 989.0 275.1 A 7 7 0 0 1 996.0 268.1 L 996.0 275.1 Z" fill="#b03a2e" stroke="#16213e" stroke-width="1"/>
+<path d="M 1003.0 275.1 A 7 7 0 0 1 996.0 282.1 L 996.0 275.1 Z" fill="#b03a2e" stroke="#16213e" stroke-width="1"/>
+<text x="1008.0" y="269.1" font-size="7.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >hook / CoG</text>
+<text x="932.0" y="224.55" font-size="7.4" text-anchor="end" fill="#1f6f8b" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >8831</text>
+<text x="1058.0" y="323.55" font-size="7.4" text-anchor="start" fill="#1f6f8b" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >8192</text>
+<line x1="876.0" y1="170" x2="1116.0" y2="170" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="876.0" y1="166" x2="876.0" y2="174" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="1116.0" y1="166" x2="1116.0" y2="174" stroke="#b03a2e" stroke-width="0.9"/>
+<text x="996.0" y="166" font-size="8" text-anchor="middle" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >BA = 3.146 m</text>
+<line x1="880.0" y1="386" x2="1112.0" y2="386" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="880.0" y1="382" x2="880.0" y2="390" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="1112.0" y1="382" x2="1112.0" y2="390" stroke="#b03a2e" stroke-width="0.9"/>
+<text x="996.0" y="398" font-size="8" text-anchor="middle" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >BF = 3.076 m</text>
+<line x1="1138.0" y1="182" x2="1138.0" y2="372" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="1134.0" y1="182" x2="1142.0" y2="182" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="1134.0" y1="372" x2="1142.0" y2="372" stroke="#b03a2e" stroke-width="0.9"/>
+<text x="1142.0" y="277.0" font-size="8" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(90 1142.0 277.0)">LB = 7.295 m</text>
+<text x="870.0" y="180" font-size="8" text-anchor="end" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >AFT</text>
+<text x="874.0" y="376" font-size="8" text-anchor="end" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >FWD</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="30 Side" id="layer-side">
+<rect x="768" y="452" width="456" height="318" fill="none" stroke="#16213e" stroke-width="1" rx="0"/>
+<rect x="768" y="452" width="456" height="20" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="776" y="467" font-size="10.5" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >VIEW C — SIDE ELEVATION (profile)</text>
+<path d="M 828 668 L 1168 668 L 1150 706 C 1098 728 908 728 846 704 Z" fill="#eef3f9" stroke="#5d6d7e" stroke-width="1.1"/>
+<circle cx="996" cy="490" r="7" fill="#fff" stroke="#5d6d7e" stroke-width="2"/>
+<ellipse cx="996" cy="508" rx="8" ry="11" fill="none" stroke="#5d6d7e" stroke-width="2.4"/>
+<line x1="990" y1="518" x2="864" y2="684" stroke="#1f6f8b" stroke-width="4"/>
+<line x1="1002" y1="518" x2="1128" y2="662" stroke="#1f6f8b" stroke-width="4"/>
+<circle cx="864" cy="680" r="3.6" fill="#fff" stroke="#0e6655" stroke-width="1.8"/>
+<path d="M 859 685 a5.5 5.5 0 1 0 11 0" fill="none" stroke="#5d6d7e" stroke-width="2"/>
+<circle cx="864" cy="695" r="2.6" fill="#22304a" stroke="#22304a" stroke-width="1"/>
+<circle cx="1128" cy="658" r="3.6" fill="#fff" stroke="#0e6655" stroke-width="1.8"/>
+<path d="M 1123 663 a5.5 5.5 0 1 0 11 0" fill="none" stroke="#5d6d7e" stroke-width="2"/>
+<circle cx="1128" cy="673" r="2.6" fill="#22304a" stroke="#22304a" stroke-width="1"/>
+<text x="900.0" y="589.0" font-size="9.5" text-anchor="start" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(40 900.0 589.0)">LA</text>
+<text x="1066.0" y="576.0" font-size="9.5" text-anchor="start" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(-52 1066.0 576.0)">LF</text>
+<circle cx="993" cy="664" r="7" fill="#fff" stroke="#b03a2e" stroke-width="1.4"/>
+<path d="M 986 664 A 7 7 0 0 1 993 657 L 993 664 Z" fill="#b03a2e" stroke="#16213e" stroke-width="1"/>
+<path d="M 1000 664 A 7 7 0 0 1 993 671 L 993 664 Z" fill="#b03a2e" stroke="#16213e" stroke-width="1"/>
+<text x="993" y="653" font-size="8" text-anchor="middle" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >CoG</text>
+<line x1="864" y1="696" x2="864" y2="744" stroke="#b03a2e" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="1128" y1="674" x2="1128" y2="744" stroke="#b03a2e" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="864" y1="744" x2="1128" y2="744" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="864" y1="740" x2="864" y2="748" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="1128" y1="740" x2="1128" y2="748" stroke="#b03a2e" stroke-width="0.9"/>
+<text x="996.0" y="739" font-size="8" text-anchor="middle" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >LB = 7.295 m</text>
+<line x1="1198" y1="662" x2="1198" y2="684" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="1194" y1="662" x2="1202" y2="662" stroke="#b03a2e" stroke-width="0.9"/>
+<line x1="1194" y1="684" x2="1202" y2="684" stroke="#b03a2e" stroke-width="0.9"/>
+<text x="1202" y="673.0" font-size="7.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif"  transform="rotate(90 1202 673.0)">ΔH=0.80</text>
+<text x="1108" y="656" font-size="8" text-anchor="end" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >60.4°</text>
+<text x="882" y="678" font-size="8" text-anchor="start" fill="#1f6f8b" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >63.9°</text>
+<text x="776" y="762" font-size="7.6" text-anchor="start" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" font-style="italic">AFT ←   → FWD   ·   aft legs longer to hold level lift under CoG offset &amp; ΔH</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="40 Detail Fittings" id="layer-detA">
+<rect x="1236" y="122" width="404" height="372" fill="none" stroke="#16213e" stroke-width="1" rx="0"/>
+<rect x="1236" y="122" width="404" height="20" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="1244" y="137" font-size="9.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DETAIL A — CROSBY END-FITTING STACK + LOADS</text>
+<line x1="1306" y1="454" x2="1358" y2="454" stroke="#5d6d7e" stroke-width="3"/>
+<circle cx="1332" cy="444" r="9" fill="#fff" stroke="#5d6d7e" stroke-width="2"/>
+<path d="M 1319 420 a13 13 0 1 1 26 0" fill="none" stroke="#5d6d7e" stroke-width="3.4"/>
+<line x1="1319" y1="420" x2="1345" y2="420" stroke="#5d6d7e" stroke-width="3.2"/>
+<circle cx="1319" cy="420" r="2.6" fill="#5d6d7e" stroke="#16213e" stroke-width="1"/>
+<rect x="1343" y="415" width="7" height="10" fill="#5d6d7e" stroke="#5d6d7e" stroke-width="1" rx="0"/>
+<path d="M 1332 352 C 1317 352 1317 380 1332 382 C 1347 380 1347 352 1332 352" fill="none" stroke="#5d6d7e" stroke-width="3.2"/>
+<line x1="1323" y1="358" x2="1341" y2="358" stroke="#5d6d7e" stroke-width="3"/>
+<ellipse cx="1332" cy="322" rx="9" ry="14" fill="none" stroke="#5d6d7e" stroke-width="3"/>
+<ellipse cx="1332" cy="278" rx="13" ry="12" fill="none" stroke="#5d6d7e" stroke-width="3.4"/>
+<line x1="1346" y1="414" x2="1386" y2="414" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="1346" cy="414" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="1386" cy="414" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="1386" y="418.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >6</text>
+<text x="1404" y="410" font-size="8.6" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >Anchor shackle G-209A 1&quot;</text>
+<text x="1404" y="422" font-size="7.4" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Crosby 1017582 · bolt type</text>
+<text x="1632" y="416" font-size="8.2" text-anchor="end" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >WLL 12.5 t / MBL 62.5 t</text>
+<line x1="1346" y1="368" x2="1386" y2="368" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="1346" cy="368" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="1386" cy="368" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="1386" y="372.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >5</text>
+<text x="1404" y="364" font-size="8.6" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >HP connector S-237 Fr.25</text>
+<text x="1404" y="376" font-size="7.4" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Crosby 1020722 · &quot;Hammerlok&quot;</text>
+<text x="1632" y="370" font-size="8.2" text-anchor="end" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >WLL 11.34 t / MBL 56.7 t</text>
+<line x1="1346" y1="322" x2="1386" y2="322" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="1346" cy="322" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="1386" cy="322" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="1386" y="326.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >4</text>
+<text x="1404" y="318" font-size="8.6" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >Master link — sub/child</text>
+<text x="1404" y="330" font-size="7.4" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Crosby A-345 child</text>
+<text x="1632" y="324" font-size="8.2" text-anchor="end" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >WLL 27.7 t</text>
+<line x1="1346" y1="278" x2="1386" y2="278" stroke="#16213e" stroke-width="0.8"/>
+<circle cx="1346" cy="278" r="2.2" fill="#16213e" stroke="#16213e" stroke-width="1"/>
+<circle cx="1386" cy="278" r="13" fill="#fff" stroke="#16213e" stroke-width="1.4"/>
+<text x="1386" y="282.5" font-size="11" text-anchor="middle" fill="#16213e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >3</text>
+<text x="1404" y="274" font-size="8.6" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >Master link assembly</text>
+<text x="1404" y="286" font-size="7.4" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Crosby A-345W 1.50 / 1014807</text>
+<text x="1632" y="280" font-size="8.2" text-anchor="end" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >WLL 27.7 t / MBL 138.5 t</text>
+<text x="1332" y="474" font-size="7.4" text-anchor="middle" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >to hull lift eye (FR 2+50 / 11+595)</text>
+<text x="1332" y="256" font-size="7.6" text-anchor="middle" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >↑ to crane hook</text>
+<text x="1244" y="486" font-size="7.4" text-anchor="start" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" font-style="italic">Stack indicative · all Crosby alloy, certified · DF: shackle &amp; S-237 = 5:1</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="45 Detail Bearing" id="layer-detB">
+<rect x="1236" y="506" width="404" height="264" fill="none" stroke="#16213e" stroke-width="1" rx="0"/>
+<rect x="1236" y="506" width="404" height="20" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="1244" y="521" font-size="9.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DETAIL B — HULL-EYE / SLING BEARING (§8.2)</text>
+<line x1="1260" y1="740" x2="1386" y2="740" stroke="#5d6d7e" stroke-width="3"/>
+<path d="M 1301 740 L 1301 694 A 15 15 0 0 1 1331 694 L 1331 740 Z" fill="#d6dfeb" stroke="#5d6d7e" stroke-width="1.4"/>
+<circle cx="1316" cy="694" r="10" fill="#fff" stroke="#5d6d7e" stroke-width="1.6"/>
+<line x1="1288" y1="694" x2="1344" y2="694" stroke="#5d6d7e" stroke-width="5"/>
+<path d="M 1298 694 C 1286 650 1346 650 1334 694" fill="none" stroke="#5d6d7e" stroke-width="4.5"/>
+<path d="M 1308 656 Q 1316 647 1324 656" fill="none" stroke="#1f6f8b" stroke-width="7"/>
+<line x1="1310" y1="656" x2="1290" y2="616" stroke="#1f6f8b" stroke-width="7"/>
+<line x1="1322" y1="656" x2="1342" y2="616" stroke="#1f6f8b" stroke-width="7"/>
+<ellipse cx="1316" cy="655" rx="10" ry="4.5" fill="none" stroke="#1f6f8b" stroke-width="2" stroke-dasharray="2 2"/>
+<text x="1406" y="548" font-size="8.0" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >w ≥ 1.25·d + 25 mm</text>
+<text x="1632" y="548" font-size="7.2" text-anchor="end" fill="#0e6655" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >[§8.2.1]</text>
+<text x="1406" y="572" font-size="8.0" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >D/d ≥ 4 → eff. ≥ 0.75</text>
+<text x="1632" y="572" font-size="7.2" text-anchor="end" fill="#0e6655" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >[§5.12]</text>
+<text x="1406" y="596" font-size="8.0" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >pin-hole Ø = pin +2 mm</text>
+<text x="1632" y="596" font-size="7.2" text-anchor="end" fill="#0e6655" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >[§8.4.1]</text>
+<text x="1406" y="620" font-size="8.0" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >ovalises → radiused seat</text>
+<text x="1632" y="620" font-size="7.2" text-anchor="end" fill="#0e6655" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >[§8.2.2]</text>
+<text x="1406" y="644" font-size="8.0" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Secutex SF-2 at bearing</text>
+<text x="1632" y="644" font-size="7.2" text-anchor="end" fill="#0e6655" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >—</text>
+<text x="1406" y="668" font-size="8.0" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >100% visual+MPI welds</text>
+<text x="1632" y="668" font-size="7.2" text-anchor="end" fill="#0e6655" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >[§8.6.1]</text>
+<text x="1276" y="680" font-size="7.0" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >d=sling Ø  D=bow Ø</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="50 BOM" id="layer-bom">
+<rect x="44" y="782" width="1180" height="192" fill="none" stroke="#16213e" stroke-width="1" rx="0"/>
+<rect x="44" y="782" width="1180" height="24" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="50" y="798" font-size="8.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >ITEM</text>
+<text x="90" y="798" font-size="8.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >PART NUMBER</text>
+<text x="410" y="798" font-size="8.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DESCRIPTION</text>
+<text x="870" y="798" font-size="8.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >QTY</text>
+<text x="922" y="798" font-size="8.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >WLL / SWL</text>
+<text x="1026" y="798" font-size="8.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >MBL</text>
+<rect x="44" y="806" width="1180" height="24" fill="#f7fafd" stroke="none" stroke-width="1" rx="0"/>
+<text x="64.0" y="822" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >1</text>
+<text x="90" y="822" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >RS-EL-SEAGULL_LIFT-10001-0</text>
+<text x="410" y="822" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >8.831 m · 12 t roundsling, AFT (SpanSet Magnum)</text>
+<text x="890.0" y="822" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >2</text>
+<text x="922" y="822" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >12 t</text>
+<text x="1026" y="822" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >84 t (7:1)</text>
+<line x1="44" y1="806" x2="1224" y2="806" stroke="#dfe6ee" stroke-width="0.6"/>
+<text x="64.0" y="846" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >2</text>
+<text x="90" y="846" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >RS-EL-SEAGULL_LIFT-10002-0</text>
+<text x="410" y="846" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >8.192 m · 10 t roundsling, FWD (SpanSet Magnum)</text>
+<text x="890.0" y="846" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >2</text>
+<text x="922" y="846" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >10 t</text>
+<text x="1026" y="846" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >70 t (7:1)</text>
+<line x1="44" y1="830" x2="1224" y2="830" stroke="#dfe6ee" stroke-width="0.6"/>
+<rect x="44" y="854" width="1180" height="24" fill="#f7fafd" stroke="none" stroke-width="1" rx="0"/>
+<text x="64.0" y="870" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >3</text>
+<text x="90" y="870" font-size="7.6" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >CROSBY A-345W 1.50 / 1014807-MASTER</text>
+<text x="410" y="870" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >27.7 t master link</text>
+<text x="890.0" y="870" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >1</text>
+<text x="922" y="870" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >27.7 t</text>
+<text x="1026" y="870" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >138.5 t (5:1)*</text>
+<line x1="44" y1="854" x2="1224" y2="854" stroke="#dfe6ee" stroke-width="0.6"/>
+<text x="64.0" y="894" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >4</text>
+<text x="90" y="894" font-size="7.6" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >CROSBY A-345W 1.50 / 1014807-CHILD</text>
+<text x="410" y="894" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >27.7 t master link — sub/child</text>
+<text x="890.0" y="894" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >2</text>
+<text x="922" y="894" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >27.7 t</text>
+<text x="1026" y="894" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >138.5 t (5:1)*</text>
+<line x1="44" y1="878" x2="1224" y2="878" stroke="#dfe6ee" stroke-width="0.6"/>
+<rect x="44" y="902" width="1180" height="24" fill="#f7fafd" stroke="none" stroke-width="1" rx="0"/>
+<text x="64.0" y="918" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >5</text>
+<text x="90" y="918" font-size="7.6" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >CROSBY 237_25 / 1020722</text>
+<text x="410" y="918" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Hammerlok sling-saver HP connector S-237 Fr.25</text>
+<text x="890.0" y="918" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >4</text>
+<text x="922" y="918" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >11.34 t</text>
+<text x="1026" y="918" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >56.7 t (5:1)</text>
+<line x1="44" y1="902" x2="1224" y2="902" stroke="#dfe6ee" stroke-width="0.6"/>
+<text x="64.0" y="942" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >6</text>
+<text x="90" y="942" font-size="7.6" text-anchor="start" fill="#0e6655" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >CROSBY G-209A_1.00 / 1017582</text>
+<text x="410" y="942" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Bolt-type alloy anchor shackle, 1&quot;</text>
+<text x="890.0" y="942" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >4</text>
+<text x="922" y="942" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >12.5 t</text>
+<text x="1026" y="942" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >62.5 t (5:1)</text>
+<line x1="44" y1="926" x2="1224" y2="926" stroke="#dfe6ee" stroke-width="0.6"/>
+<rect x="44" y="950" width="1180" height="24" fill="#f7fafd" stroke="none" stroke-width="1" rx="0"/>
+<text x="64.0" y="966" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >7</text>
+<text x="90" y="966" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >SPANSET SECUTEX SF-2</text>
+<text x="410" y="966" font-size="7.6" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Protective sleeve at hull-eye bearing</text>
+<text x="890.0" y="966" font-size="8.6" text-anchor="middle" fill="#22304a" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >8</text>
+<text x="922" y="966" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >—</text>
+<text x="1026" y="966" font-size="8.6" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >—</text>
+<line x1="44" y1="950" x2="1224" y2="950" stroke="#dfe6ee" stroke-width="0.6"/>
+<line x1="84" y1="782" x2="84" y2="974" stroke="#dfe6ee" stroke-width="0.6"/>
+<line x1="404" y1="782" x2="404" y2="974" stroke="#dfe6ee" stroke-width="0.6"/>
+<line x1="864" y1="782" x2="864" y2="974" stroke="#dfe6ee" stroke-width="0.6"/>
+<line x1="916" y1="782" x2="916" y2="974" stroke="#dfe6ee" stroke-width="0.6"/>
+<line x1="1020" y1="782" x2="1020" y2="974" stroke="#dfe6ee" stroke-width="0.6"/>
+<rect x="44" y="782" width="1180" height="192" fill="none" stroke="#16213e" stroke-width="0.9" rx="0"/>
+<text x="44" y="987" font-size="7.4" text-anchor="start" fill="#5d6d7e" font-weight="normal" font-family="Helvetica, Arial, sans-serif" font-style="italic">WLL = Working Load Limit/SWL · MBL = Minimum Breaking Load · *master-link MBL per Crosby cert. (assumed 5:1).  Lengths in mm; nominal (actual).</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="60 Design Loads" id="layer-loads">
+<rect x="44" y="998" width="574" height="20" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="52" y="1012" font-size="9.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DESIGN LOADS — GL Noble Denton 0027/ND Rev 10</text>
+<rect x="44" y="998" width="574" height="152" fill="none" stroke="#16213e" stroke-width="0.9" rx="0"/>
+<rect x="44" y="1018" width="574" height="22" fill="#f7fafd" stroke="none" stroke-width="1" rx="0"/>
+<text x="52" y="1033" font-size="8.2" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Design weight (Ginton 602M)</text>
+<text x="292" y="1033" font-size="8.2" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >22.0 t  (21.76 t)</text>
+<text x="52" y="1055" font-size="8.2" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Dynamic hook (×DAF 1.15)</text>
+<text x="292" y="1055" font-size="8.2" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >25.0 t  ≤ master link 27.7 t ✓ (90%)</text>
+<rect x="44" y="1062" width="574" height="22" fill="#f7fafd" stroke="none" stroke-width="1" rx="0"/>
+<text x="52" y="1077" font-size="8.2" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >AFT sling — static / design (×DAF×SKL)</text>
+<text x="292" y="1077" font-size="8.2" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >6.21 t / 8.93 t  ≤ WLL 12 t ✓ (74%)</text>
+<text x="52" y="1099" font-size="8.2" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >FWD sling — static / design</text>
+<text x="292" y="1099" font-size="8.2" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >6.10 t / 8.77 t  ≤ WLL 10 t ✓ (88%)</text>
+<rect x="44" y="1106" width="574" height="22" fill="#f7fafd" stroke="none" stroke-width="1" rx="0"/>
+<text x="52" y="1121" font-size="8.2" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Shackle G-209A</text>
+<text x="292" y="1121" font-size="8.2" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >MBL/3 = 20.8 t ≥ 8.93 t ✓ · WLL 12.5 ≥ 6.21 ✓</text>
+<text x="52" y="1143" font-size="8.2" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Factors</text>
+<text x="292" y="1143" font-size="8.2" text-anchor="start" fill="#b03a2e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DAF 1.15 (sheltered/inshore) · SKL 1.25 · soft-sling SF 7:1</text>
+<line x1="286" y1="998" x2="286" y2="1150" stroke="#dfe6ee" stroke-width="0.6"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="70 Notes" id="layer-notes">
+<rect x="630" y="998" width="594" height="20" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="638" y="1012" font-size="9.6" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >NOTES</text>
+<rect x="630" y="998" width="594" height="152" fill="none" stroke="#16213e" stroke-width="0.9" rx="0"/>
+<text x="638" y="1033" font-size="7.9" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >SCOPE: recovery of floating USV from sea AT PORT, 0 wave height,</text>
+<text x="638" y="1049" font-size="7.9" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >lifted to deck (sheltered) → DAF 1.15, NOT 1.30 (open-sea).</text>
+<text x="638" y="1065" font-size="7.9" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >Open-sea lift would need DAF 1.30 + uprated master link (≈ 31 t).</text>
+<text x="638" y="1081" font-size="7.9" text-anchor="start" fill="#2c3e50" font-weight="normal" font-family="Helvetica, Arial, sans-serif" >No personnel aboard (Ginton); equal fuel fill if &lt;100%; matched pairs.</text>
+<line x1="636" y1="1088" x2="1218" y2="1088" stroke="#dfe6ee" stroke-width="0.6"/>
+<text x="1216" y="1103" font-size="8.4" text-anchor="end" fill="#22304a" font-weight="bold" font-family="'Noto Sans Hebrew','Arial Hebrew',Helvetica,Arial,sans-serif" direction="rtl">אורכי רצועות · חוזק רצועות (WLL/MBL)</text>
+<text x="1216" y="1118" font-size="8.4" text-anchor="end" fill="#22304a" font-weight="bold" font-family="'Noto Sans Hebrew','Arial Hebrew',Helvetica,Arial,sans-serif" direction="rtl">שאקל G-209A ועומס · טבעת מסטר A-345 ועומס</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="80 Title Block" id="layer-tb">
+<rect x="1236" y="782" width="404" height="368" fill="none" stroke="#16213e" stroke-width="1.2" rx="0"/>
+<rect x="1236" y="782" width="404" height="30" fill="#22304a" stroke="#16213e" stroke-width="1" rx="0"/>
+<text x="1244" y="802" font-size="10" text-anchor="start" fill="#fff" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >RIGGING DESIGN — AI-ASSISTED (A. SAPIR)</text>
+<rect x="1236" y="812" width="202.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1241" y="823" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >TITLE</text>
+<text x="1241" y="836" font-size="7.8" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >LIFTING SET 22 t · PORT</text>
+<rect x="1438.0" y="812" width="202.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1443.0" y="823" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >BASIS</text>
+<text x="1443.0" y="836" font-size="7.4" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >Ginton 287-235 · GL 0027/ND</text>
+<rect x="1236" y="842" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1241" y="853" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DRG No.</text>
+<text x="1241" y="866" font-size="7.0" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >STRAP-ASSY-22T-P</text>
+<rect x="1337.0" y="842" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1342.0" y="853" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >REV</text>
+<text x="1342.0" y="866" font-size="10" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >3</text>
+<rect x="1438.0" y="842" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1443.0" y="853" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >SIZE</text>
+<text x="1443.0" y="866" font-size="10" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >A3</text>
+<rect x="1539.0" y="842" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1544.0" y="853" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >SHEET</text>
+<text x="1544.0" y="866" font-size="10" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >1 / 1</text>
+<rect x="1236" y="872" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1241" y="883" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DRAWN</text>
+<text x="1241" y="896" font-size="9" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >A. SAPIR</text>
+<rect x="1337.0" y="872" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1342.0" y="883" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >DATE</text>
+<text x="1342.0" y="896" font-size="8.4" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >28-05-26</text>
+<rect x="1438.0" y="872" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1443.0" y="883" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >SCALE</text>
+<text x="1443.0" y="896" font-size="10" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >NTS</text>
+<rect x="1539.0" y="872" width="101.0" height="30" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1544.0" y="883" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >UNITS</text>
+<text x="1544.0" y="896" font-size="10" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >mm / t</text>
+<rect x="1236" y="902" width="202.0" height="248" fill="none" stroke="#16213e" stroke-width="0.6" rx="0"/>
+<text x="1241" y="913" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >PROJECTION</text>
+<text x="1241" y="1144" font-size="8.4" text-anchor="start" fill="#22304a" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >1st angle</text>
+<circle cx="1468.0" cy="1026.0" r="11" fill="none" stroke="#16213e" stroke-width="1"/>
+<circle cx="1468.0" cy="1026.0" r="5" fill="none" stroke="#16213e" stroke-width="1"/>
+<path d="M 1496.0 1016.0 L 1522.0 1026.0 L 1496.0 1036.0 Z" fill="none" stroke="#16213e" stroke-width="1"/>
+<text x="1443.0" y="913" font-size="7" text-anchor="start" fill="#5d6d7e" font-weight="bold" font-family="Helvetica, Arial, sans-serif" >SYMBOL</text>
+</g>
+</svg>

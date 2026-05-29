@@ -8,7 +8,7 @@ const dim = '#6f8aa0';
 const amb = '#f1ab3a';
 
 export function AssemblyView({ result }: { result: DesignResult }) {
-  const { inputs, geom, loads, sel } = result;
+  const { loading, geom, loads, sel } = result;
   const hookY = 22;
   const baseY = 176;
   const pts = [28, 100, 200, 272];
@@ -47,7 +47,7 @@ export function AssemblyView({ result }: { result: DesignResult }) {
             FWD {sel.strapF.it.w.toFixed(0)}t · {loads.fwdDes.toFixed(1)}t · {geom.degF.toFixed(1)}°
           </text>
           <text x="150" y={baseY + 27} fill={dim} fontFamily="monospace" fontSize="7.5" textAnchor="middle">
-            4× G-209A · USV {inputs.W.toFixed(1)}t · H {geom.HA.toFixed(2)}m
+            4× G-209A · USV {loading.W.toFixed(1)}t · H {geom.HA.toFixed(2)}m
           </text>
         </svg>
       </div>
